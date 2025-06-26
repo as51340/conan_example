@@ -1,5 +1,5 @@
 #!/bin/bash
 python3 -m virtualenv ./venv
 source ./venv/bin/activate
-pip install --upgrade pip
-pip install conan
+python3 -m pip install --upgrade pip
+python3 -m pip install conan
