@@ -1,11 +1,13 @@
 # Basic setup, to bring conan into the enviroment
 ./setup.sh
+
 source ./venv/bin/activate
+conan profile detect
 
 # Use information from conanfile.py & example_profile
 # to get requirements, build those which are missing
 # using cmake_layout to put stuff in sensible places
-conan install . --build=missing -pr ./example_profile
+conan install . --build=missing -pr ./example_profile_mac
 
 # Use preset that was generated to configure cmake
 cmake --preset conan-release
